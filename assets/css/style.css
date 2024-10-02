@@ -887,7 +887,9 @@ main {
   #PORTFOLIO
 \*-----------------------------------*/
 
-.filter-list { display: none; }
+.filter-list {
+  display: none;
+}
 
 .filter-select-box {
   position: relative;
@@ -908,7 +910,9 @@ main {
   font-weight: var(--fw-300);
 }
 
-.filter-select.active .select-icon { transform: rotate(0.5turn); }
+.filter-select.active .select-icon {
+  transform: rotate(0.5turn);
+}
 
 .select-list {
   background: var(--eerie-black-2);
@@ -942,16 +946,20 @@ main {
   border-radius: 8px;
 }
 
-.select-item button:hover { --eerie-black-2: hsl(240, 2%, 20%); }
+.select-item button:hover {
+  --eerie-black-2: hsl(240, 2%, 20%);
+}
 
 .project-list {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjusts columns based on screen size */
   gap: 30px;
   margin-bottom: 10px;
 }
 
-.project-item { display: none; }
+.project-item {
+  display: none;
+}
 
 .project-item.active {
   display: block;
@@ -959,16 +967,22 @@ main {
 }
 
 @keyframes scaleUp {
-  0% { transform: scale(0.5); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
-.project-item > a { width: 100%; }
+.project-item > a {
+  width: 100%;
+}
 
 .project-img {
   position: relative;
   width: 100%;
-  height: 200px;
+  height: 200px; /* Set a fixed height for all images */
   border-radius: 16px;
   overflow: hidden;
   margin-bottom: 15px;
@@ -986,7 +1000,9 @@ main {
   transition: var(--transition-1);
 }
 
-.project-item > a:hover .project-img::before { background: hsla(0, 0%, 0%, 0.5); }
+.project-item > a:hover .project-img::before {
+  background: hsla(0, 0%, 0%, 0.5);
+}
 
 .project-item-icon-box {
   --scale: 0.8;
@@ -1010,19 +1026,25 @@ main {
   opacity: 1;
 }
 
-.project-item-icon-box ion-icon { --ionicon-stroke-width: 50px; }
+.project-item-icon-box ion-icon {
+  --ionicon-stroke-width: 50px;
+}
 
 .project-img img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: 100%; /* Set to 100% to fill the parent container */
+  object-fit: cover; /* Ensures all images cover the entire area without distortion */
   transition: var(--transition-1);
 }
 
-.project-item > a:hover img { transform: scale(1.1); }
+.project-item > a:hover img {
+  transform: scale(1.1);
+}
 
 .project-title,
-.project-category { margin-left: 10px; }
+.project-category {
+  margin-left: 10px;
+}
 
 .project-title {
   color: var(--white-2);
@@ -1037,9 +1059,6 @@ main {
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
 }
-
-
-
 
 
 /*-----------------------------------*\
