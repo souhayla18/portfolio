@@ -102,7 +102,7 @@ main{margin:20px 14px 80px;min-width:259px}
 @keyframes spinRing{to{transform:rotate(360deg)}}
 
 .info-content .name{
-  font-family:var(--fm);font-size:15px;font-weight:800;
+  font-family:var(--ff);font-size:17px;font-weight:800;
   color:var(--pearl);letter-spacing:-0.3px;margin-bottom:8px;
 }
 .info-content .title{
@@ -284,6 +284,15 @@ main{margin:20px 14px 80px;min-width:259px}
 }
 .skill-tag:hover{border-color:var(--accent);color:var(--accent)}
 .skill-tag.domain{color:var(--gold);border-color:rgba(240,192,96,0.28);background:var(--g10)}
+
+.stack-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.stack-tag{
+  font-size:10px;color:var(--teal);
+  background:var(--t10);border:1px solid rgba(46,196,182,0.25);
+  padding:3px 10px;border-radius:20px;font-family:var(--fm);
+  transition:all var(--t1);cursor:default;
+}
+.stack-tag:hover{background:rgba(46,196,182,0.15);border-color:var(--teal)}
 
 .dl-btn{
   display:inline-flex;align-items:center;gap:8px;
