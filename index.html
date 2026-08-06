@@ -1,1392 +1,451 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Personal Portfolio</title>
-
-  <!--
-    - favicon
-  -->
+  <title>Souhayla Elmeftahi — Data Engineer</title>
   <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
-
-  <!--
-    - custom css link
-  -->
   <link rel="stylesheet" href="./assets/css/style.css">
-
-  <!--
-    - google font link
-  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    #bg-canvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none}
+    main{position:relative;z-index:1}
+    .tw-role{font-family:'DM Mono',monospace;font-size:12px}
+  </style>
 </head>
-
 <body>
+<canvas id="bg-canvas"></canvas>
+<main>
 
-  <!--
-    - #MAIN
-  -->
-
-  <main>
-
-    <!--
-      - #SIDEBAR
-    -->
-
-    <aside class="sidebar" data-sidebar>
-
-      <div class="sidebar-info">
-
-        <figure class="avatar-box">
-          <img src="./assets/images/prof.jpg" alt="Souhayla ELMEFTAHI" width="20">
-        </figure>
-
-        <div class="info-content">
-          <h1 class="name" title="Souhayla ELMEFTAHI">Souhayla ELMEFTAHI</h1>
-
-          <p class="title">data engineer</p>
-        </div>
-
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
-
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
-
+  <!-- SIDEBAR -->
+  <aside class="sidebar" data-sidebar>
+    <div class="sidebar-info">
+      <figure class="avatar-box">
+        <div class="avatar-ring"></div>
+        <img src="./assets/images/prof.jpg" alt="Souhayla Elmeftahi" width="150">
+      </figure>
+      <div class="info-content">
+        <h1 class="name">Souhayla Elmeftahi</h1>
+        <p class="title">Data Engineer</p>
       </div>
-
-      <div class="sidebar-info_more">
-
-        <div class="separator"></div>
-
-        <ul class="contacts-list">
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
-
-              <a href="mailto:souhaylaelmeftahi@gmail.com" class="contact-link">souhaylaelmeftahi@gmail</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Phone</p>
-
-              <a href="tel:+212668546041" class="contact-link">+(212)668546041</a>
-            </div>
-
-          </li>
-
-  <!--        <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="calendar-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Birthday</p>
-
-              <time datetime="1982-06-23">Aug 21</time>
-            </div>
-
-          </li> -->
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Location</p>
-
-              <address>Morocco</address>
-            </div>
-
-          </li>
-
-        </ul>
-
-        <div class="separator"></div>
-
-        <ul class="social-list">
-
-          <li class="social-item">
-            <a href="https://github.com/souhayla18" class="social-link">
-              <ion-icon name="logo-github"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="https://www.linkedin.com/in/souhayla-elmeftahi-49b5251a8/" class="social-link">
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="https://www.researchgate.net/profile/Souhayla-Elmeftahi?ev=hdr_xprf&_sg=nxWGNuCAqCh7oIms880zQqtKOsGwqkREqy_JzfCv9Nga4-JjSTWnlHYB2pwFUBk6dS-ViZaCzGv4OHSLE9-H6fcH" class="social-link">
-              <ion-icon name="globe-outline"></ion-icon>
-            </a>
-          </li>
-
-        </ul>
-
-      </div>
-
-    </aside>
-
-
-
-
-
-    <!--
-      - #main-content
-    -->
-
-    <div class="main-content">
-
-      <!--
-        - #NAVBAR
-      -->
-
-      <nav class="navbar">
-
-        <ul class="navbar-list">
-
-          <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>About</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resume</button>
-          </li>
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>CERTIFICATES</button>
-          </li>
-          
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Portfolio</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Blog</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Contact</button>
-          </li>
-
-        </ul>
-
-      </nav>
-
-
-
-
-
-      <!--
-        - #ABOUT
-      -->
-
-      <article class="about  active" data-page="about">
-
-        <header>
-          <h2 class="h2 article-title">About me</h2>
-        </header>
-
-        <section class="about-text">
-          <p>Hi, I’m Souhayla, a Junior Data Engineer from Morocco. 
-   My love for data began with a simple curiosity: 
-   How can information tell stories and solve real-world problems? 
-   This question ignited a passion that continues to drive me today. 
-   I’ve gained experience across Data Engineering, Business Intelligence, Machine Learning, and Data Science, 
-   and what fascinates me most is the power of data to transform the way we understand and shape our world.</p>
-
-            
-
-          <p>
-            I believe data is more than just numbers it’s the key to unlocking innovation.
-             It can fuel industries, spark change, and transform how we live. 
-             That’s why I’ve taken every opportunity to dive deeper, 
-             teaching myself cloud platforms like Azure, GCP, and AWS, 
-             and applying them in hands-on projects. I’m always learning, 
-             always pushing forward, and I’m especially excited about the future of AI, big data, and real-time processing.
-          </p>
-          <p>My goal? To turn raw data into powerful, actionable insights that make a real difference. Whether it's solving business challenges or exploring new technologies, 
-            I’m driven by the endless possibilities data offers and I can’t wait to be part of that future.</p>
-        </section>
-
-
-        <!--
-          - service
-        -->
-
-        <section class="service">
-
-          <h3 class="h3 service-title">What i'm doing</h3>
-
-          <ul class="service-list">
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/dt.png" alt="design icon" width="40">
-                
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Data Engineering</h4>
-
-                <p class="service-item-text">
-                  Capable of building and managing data pipelines, performing ETL processes.
-                   I also work on designing data architectures that help ensure smooth data flow and scalability.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/dv.jpg" alt="Web development icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Software Development</h4>
-
-                <p class="service-item-text">
-                  Capable of developing applications using Java and Python for various platforms, including web and mobile.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/cloudd.png" alt="mobile app icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Cloud Technologies</h4>
-
-                <p class="service-item-text">
-                  Capable of utilizing cloud platforms such as GCP and Azure for scalable and efficient data processing and storage solutions.
-     
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/ds.png" alt="camera icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Data Science & Data Analytics</h4>
-
-                <p class="service-item-text">
-Capable of analyzing data to extract valuable insights and building predictive models using machine learning algorithms, deep learning, and large language models (LLMs) to solve complex problems and enable intelligent decision-making.       
-                </p>
-              </div>
-
-            </li>
-
-          </ul>
-
-        </section>
-
-
-        <!--
-          - testimonials
-        -->
-
-        <section class="testimonials">
-
-          <h3 class="h3 testimonials-title">Testimonials</h3>
-
-          <ul class="testimonials-list has-scrollbar">
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-1.png" alt="Aaqib waleed" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Aaqib waleed</h4>
-                <h6 style="color: yellow; font-weight: bold;">Senior data scientist @amazon</h6>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Souhayla is a highly skilled and dedicated Future Data Engineer who excels in designing and maintaining robust data pipelines. 
-                    With strong problem-solving abilities and proficiency in key programming languages and cloud technologies,
-                     she consistently delivers innovative solutions. Her collaborative nature and positive attitude 
-                     makes her a valuable asset to any team.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-2.png" alt="Aziz Khamjane" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Aziz Khamjane</h4>
-                <h6 style="color: yellow; font-weight: bold;">Professor at the Engineering school @ENSAH</h6>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Souhayla Elmeftahi is a brilliant and hardworking engineering student, 
-                    combining remarkable intelligence and unparalleled passion for education. 
-                    Her sharp intellect and unwavering commitment to learning are a source of inspiration for her peers.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-4.png" alt="Joynal abedin" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Joynal abedin</h4>
-                <h6 style="color: yellow; font-weight: bold;">senior data scientist & AI  @T-Mobile</h6>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    your eagerness to tackle complex challenges and your proactive approach to learning are truly admirable.
-                     Your dedication to mastering data engineering and your enthusiasm for exploring new concepts are evident in your work.
-                      I am confident that with your strong work ethic and determination, you will excel in the field of data engineering. 
-                      Keep up the great work and continue to push yourself to new heights!
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-          </ul>
-
-        </section>
-
-
-        <!--
-          - testimonials modal
-        -->
-
-        <div class="modal-container" data-modal-container>
-
-          <div class="overlay" data-overlay></div>
-
-          <section class="testimonials-modal">
-
-            <button class="modal-close-btn" data-modal-close-btn>
-              <ion-icon name="close-outline"></ion-icon>
-            </button>
-
-            <div class="modal-img-wrapper">
-              <figure class="modal-avatar-box">
-                <img src="./assets/images/avatar-1.png" alt="aziz khamjane" width="80" data-modal-img>
-              </figure>
-
-              <img src="./assets/images/icon-quote.svg" alt="quote icon">
-            </div>
-
-            <div class="modal-content">
-
-              <h4 class="h3 modal-title" data-modal-title>aziz khamjane</h4>
-
-              <time datetime="2021-06-14">Apr 4th, 2024</time>
-
-              <div data-modal-text>
-                <p>
-                 
-                </p>
-              </div>
-
-            </div>
-
-          </section>
-
-        </div>
-
-      </article>
-
-      <!--
-        - #RESUME
-      -->
-
-      <article class="resume" data-page="resume">
-
-        <header>
-          <h2 class="h2 article-title">Resume</h2>
-        </header>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Education</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title"> National	School	of	Applied	Sciences	of	Al-	Hoceima,Morocco</h4>
-
-              <span>2022 —Jul	2025</span>
-
-              <p class="timeline-text">
-                State	Engineer	Degree	in	Data	Engineering.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title"> National	School	of	Applied	Sciences	of	Al-	Hoceima,Morocco</h4>
-
-              <span>2020 — 2022</span>
-
-              <p class="timeline-text">
-                preparatory cycle: Sciences & Techniques for the Engineer
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Faculty of Science and technics of Al-Hoceima</h4>
-
-              <span>2019 — 2020</span>
-
-              <p class="timeline-text">
-                L1	in	DEUST	Program	(Mathematics,	Computer	Science,	Physics.)
-              </p>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Experience</h3>
-          </div>
-
-          <ol class="timeline-list">
-             <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Data engineer </h4>
-
-              <span>july,2024</span>
-
-              <p class="timeline-text">
-                Intership at sofrecom (Orange Group)
-              </p>
-
-            </li>
-           
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Data engineer</h4>
-
-              <span>july,2024</span>
-
-              <p class="timeline-text">
-                Intership at BROCCOLIDATA
-              </p>
-
-            </li>
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Data Scientist & AI </h4>
-
-              <span>aug,2024</span>
-
-              <p class="timeline-text">
-                Intership at 3D SMART FACTORY
-              </p>
-
-            </li>
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Data Scientist & AI </h4>
-
-              <span>march,2024</span>
-
-              <p class="timeline-text">
-                Freelance at Fiverr
-              </p>
-
-            </li>
-            
-
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Data engineer & Data Scientist</h4>
-
-              <span>july,2023</span>
-
-              <p class="timeline-text">
-                Intership at IT DEPARTMENT AT @ENSAH
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Data Analyst</h4>
-
-              <span>january,2023</span>
-
-              <p class="timeline-text">
-                Virtual Intership At @Meriskill
-              </p>
-
-            </li>
-
-          </ol>
-    
-
-        </section>
-
-        <section class="skill">
-
-          <h3 class="h3 skills-title">My skills</h3>
-
-          <ul class="skills-list content-card">
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">data engineering</h5>
-                
-              </div>
-
-            
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Machine learning & deep learning & NLP </h5>
-                
-              </div>
-
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Data analyzing</h5>
-                
-              </div>
-
-              
-
-            </li>
-            
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">cloud computing (azure, gcp)</h5>
-                
-              </div>
-
-
-            </li>
-            
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">web developing & programming</h5>
-                
-              </div>
-
-
-            </li>
-          
-          
-
-          </ul>
-
-        </section>
-        <p> <br></br></p>
-        <section class="skill">
-
-          <h3 class="h3 skills-title">languages</h3>
-
-          <ul class="skills-list content-card">
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">•	Arabic	:	Native</h5>
-                <h5 class="h5">•	English	:	Fluent</h5>
-                <h5 class="h5">•	French	:	Fluent</h5>
-                
-              </div>
-    
-    
-            </li>
-          
-
-          </ul>
-
-        </section>
-        <p> <br></br></p>
-        <section class="skill">
-
-          <h3 class="h3 skills-title">soft skills</h3>
-
-          <ul class="skills-list content-card">
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">•	Ownership , Curiosity,Think Big,
-                  Communication,Problem-Solving</h5>
-                
-              </div>
-    
-    
-            </li>
-          
-
-          </ul>
-
-        </section>
-        <p> <br></br></p>
-       
-        
-       
-        <div class="timeline">
-          <button class="title-resume" onclick="window.open('./assets/images/')">
-            Download My Resume
-        </button>
-        
-
-        </div>
-        
-
-
-      </article>
-      <!-- 
-         -  CERTIFICATES
-      -->
-
-      <article class="certificates" data-page="certificates">
-        <header>
-            <h2 class="h2 article-title">Certificates</h2>
-        </header>
-    
-        <section class="certificate-posts">
-            <ul class="certificate-posts-list">
-                <li class="certificate-post-item">
-                    <a href="https://www.coursera.org/account/accomplishments/verify/7NZFP4C3NUCT">
-                        <figure class="certificate-banner-box">
-                            <img src="./assets/images/azure_cert.png" alt="Azure Data Engineer Certificate" loading="lazy">
-                        </figure>
-                        <div class="certificate-content">
-                            <h3 class="h3 certificate-item-title">Azure Data Engineer</h3>
-                            <p class="certificate-text">Issued by Microsoft (via Coursera)</p>
-                        </div>
-                    </a>
-                </li>
-    
-                <li class="certificate-post-item">
-                    <a href="https://www.coursera.org/account/accomplishments/verify/6LH3E2ML4M6K?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=pdf_header_button&utm_product=course">
-                        <figure class="certificate-banner-box">
-                            <img src="./assets/images/machine_learning_cert.png" alt="Machine Learning Certificate" loading="lazy">
-                        </figure>
-                        <div class="certificate-content">
-                            <h3 class="h3 certificate-item-title">Machine Learning - Python</h3>
-                            <p class="certificate-text">Issued by DeepLearning.AI, Stanford University (via Coursera)</p>
-                        </div>
-                    </a>
-                </li>
-    
-                <li class="certificate-post-item">
-                    <a href="https://www.udemy.com/certificate/UC-35cabcd8-35cf-47c4-83e6-9f3538f24456/">
-                        <figure class="certificate-banner-box">
-                            <img src="./assets/images/big_data_cert.png" alt="Big Data Hadoop Ecosystem Certificate" loading="lazy">
-                        </figure>
-                        <div class="certificate-content">
-                            <h3 class="h3 certificate-item-title">Big Data - Hadoop Ecosystem Masterclass</h3>
-                            <p class="certificate-text">Issued by Udemy</p>
-                        </div>
-                    </a>
-                </li>
-    
-                <li class="certificate-post-item">
-                    <a href="https://drive.google.com/drive/folders/1apBdZQ5SWOBBydlLEacgUzbUM6r9s5u5">
-                        <figure class="certificate-banner-box">
-                            <img src="./assets/images/datacamp_cert.png" alt="Data Engineering/Science/Analytics Certificates" loading="lazy">
-                        </figure>
-                        <div class="certificate-content">
-                            <h3 class="h3 certificate-item-title">Data Engineering/Science/Analytics</h3>
-                            <p class="certificate-text">Total of 12 Certificates issued by DataCamp</p>
-                        </div>
-                    </a>
-                </li>
-            </ul>
-        </section>
-    </article>
-    
-         
-
-      <!--
-        - #PORTFOLIO
-      -->
-
-      <article class="portfolio" data-page="portfolio">
-
-        <header>
-          <h2 class="h2 article-title">Projects</h2>
-        </header>
-
-        <section class="projects">
-
-          <ul class="filter-list">
-
-            <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Data Engineering</button>
-            </li>
-            
-            <li class="filter-item">
-              <button data-filter-btn>Data Science</button>
-            </li>
-
-
-            <li class="filter-item">
-              <button data-filter-btn>Development</button>
-            </li>
-            <li class="filter-item">
-              <button data-filter-btn>Dashboarding</button>
-            </li>
-
-
-          </ul>
-
-          <div class="filter-select-box">
-
-            <button class="filter-select" data-select>
-
-              <div class="select-value" data-selecct-value>Select category</div>
-
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
-              </div>
-
-            </button>
-
-            <ul class="select-list">
-
-              <li class="select-item">
-                <button data-select-item>All</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>data engineering</button>
-              </li>
-              <li class="select-item">
-                <button data-select-item>data science</button>
-              </li>
-
-
-              <li class="select-item">
-                <button data-select-item>development</button>
-              </li>
-              <li class="select-item">
-                <button data-select-item>Dashboarding</button>
-              </li>
-
-            </ul>
-
-          </div>
-        </li>
-        <ul class="project-list">
-        <li class="project-item  active" data-filter-item data-category="data engineering">
-          <a href="https://github.com/souhayla18/dataplatform_Meltano">
-
-            <figure class="project-img">
-              <div class="project-item-icon-box">
-                <ion-icon name="eye-outline"></ion-icon>
-              </div>
-
-              <img src="./assets/images/Data_Platform.png" alt="orizon" loading="lazy">
-            </figure>
-
-            <h3 class="project-title">Holistic Data Platform with ETL, dbt, and Governance Strategies</h3>
-        
-            <h6 class="project-title" style="color: red; font-weight: bold;">In Progress</h6>
-            <h6 class="project-title" style="color: rgb(197, 179, 18);">Cloud Data Engineering Using GCP & local</h6>
-​
-            <p class="project-category">Meltano , DBt, Docker, Gcp , Faas , data management principes</p>
-
-          </a>
-        </li>
-        <li class="project-item  active" data-filter-item data-category="data science">
-          <a href="https://github.com/ZakariaBenlamkadam/Nlp-recrutement/tree/main">
-
-            <figure class="project-img">
-              <div class="project-item-icon-box">
-                <ion-icon name="eye-outline"></ion-icon>
-              </div>
-
-              <img src="./assets/images/nlp_rec_arch.png" alt="orizon" loading="lazy">
-            </figure>
-
-            <h3 class="project-title">NLP-Based Recruitment Optimization System</h3>
-        
-            <p class="project-category">KAFKA, NLP techniques, LLms , LangChain.</p>
-
-          </a>
-        </li>
-        <li class="project-item  active" data-filter-item data-category="data engineering">
-          <a href="https://github.com/souhayla18/scalable_dp_Minio">
-
-            <figure class="project-img">
-              <div class="project-item-icon-box">
-                <ion-icon name="eye-outline"></ion-icon>
-              </div>
-
-              <img src="./assets/images/minioArch.jpg" alt="orizon" loading="lazy">
-            </figure>
-
-            <h3 class="project-title">build scalabe data lakehouse </h3>
-        
-            <h6 class="project-title">minio ,lambda , kafka,kraft..</h6>
-            <h6 class="project-title" style="color: red; font-weight: bold;">In Progress</h6>
-            <h6 class="project-title" style="color: rgb(197, 179, 18);">local & aws</h6>
-
-
-            <p class="project-category">Cloud Data Engineering</p>
-
-          </a>
-        </li>
-        
-
-          
-            
-           
-            <li class="project-item  active" data-filter-item data-category="data engineering">
-              <a href="https://github.com/souhayla18/-AzurCloudMigrate-CI-CD">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/adv_prj_architecture.png" alt="brawlhalla" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">adventure work pipline</h3>
-                <h6 class="project-title" style="color: rgb(197, 179, 18);">Cloud Data Engineering</h6>
-
-
-                <p class="project-category">Azure ( azure data factory , Synpase Analytics , Databricks, Azure storage, Azure DevOps), Postgres</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="data engineering">
-              <a href="https://github.com/souhayla18/Aribnb_data_exp">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/airbnb_pj_arch.png" alt="dsm." loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Airbnb  pipeline </h3>
-
-                <p class="project-category">mage.ai, Dbt, Snowflake, Postgres, Blob Storage, Python</p>
-
-              </a>
-            </li>
-            <li class="project-item  active" data-filter-item data-category="data engineering">
-              <a href="https://github.com/souhayla18/googlePatents">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/patents_arch.png" alt="dsm." loading="lazy">
-                </figure>
-
-                <h3 class="project-title">patents analysis</h3>
-
-                <p class="project-category">mage.ai, Spark , Snowflake, Selenium</p>
-
-              </a>
-            </li>
-          
-            <li class="project-item  active" data-filter-item data-category="data science">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/ML-arch.jpeg" alt="orizon" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">exploration of Scientific articles</h3>
-            
-                <h6 class="project-title">using web scraping & machine learning</h6>
-
-                <p class="project-category">ML & DL</p>
-
-              </a>
-            </li>
-            
-            <li class="project-item  active" data-filter-item data-category="data science">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/stockPrdiction.png" alt="orizon" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Amazn Stock Prediction</h3>
-            
-                <h6 class="project-title">using LSTM  GAN Sentiments analysis</h6>
-
-                <p class="project-category">deep learning & nlp</p>
-
-              </a>
-            </li>
-            
-            <li class="project-item  active" data-filter-item data-category="dashboarding">
-              <a href="https://github.com/souhayla18/INVOCING_ANALYSIS">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/BIS2.png" alt="summary" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Invoicing and Orders Analysis Dashboard</h3>
-
-                <p class="project-category",style="font-weight: bold; "><strong> PowerBI</strong></p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="dashboarding">
-              <a href="https://github.com/souhayla18/orders_analysis">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/dasht2.png" alt="summary" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Sales and Profit KPI Analysis Dashboard
-                </h3>
-
-                <p class="project-category",style="font-weight: bold; "><strong> PowerBI</strong></p>
-
-              </a>
-            </li>
-
-
-            <li class="project-item  active" data-filter-item data-category="dashboarding">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/AdventureWorkDash.png" alt="summary" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">adventure work data set report</h3>
-
-                <p class="project-category"><strong>PowerBI</strong> </p>
-
-              </a>
-            </li>
-            <li class="project-item  active" data-filter-item data-category="development">
-              <a href="https://github.com/souhayla18/jee_project">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/exampl.png" alt="finance" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Exam planner</h3>
-
-
-                <p class="project-category">spring,mariadb,angular, spring security,rest api</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/contact_manager_arch.png" alt="finance" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Contact manager</h3>
-
-
-                <p class="project-category">using java & swing & canva</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="development">
-              <a href="https://github.com/souhayla18/student-management-system">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/smdemo.png" alt="orizon" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Student Management System</h3>
-                <h6 class="project-title">using python & oracle & tikinter</h6>
-
-                <p class="project-category"> development</p>
-
-              </a>
-            </li>
-            <li class="project-item  active" data-filter-item data-category="dashboarding">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/patents Dash.png" alt="summary" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">patents analysis Dashboarding</h3>
-
-                <p class="project-category"><strong>PowerBI</strong> </p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="dashboarding">
-              <a href="https://github.com/souhayla18/E_commerce_data_exploration">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/ecomeerce_dash.png" alt="task manager" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">e-commerce data set report</h3>
-
-                <p class="project-category">Analyzed e-commerce data using <strong>SQL</strong> in <strong>BigQuery</strong> and visualized it in <strong>Looker Studio</strong>.</p>
-
-              </a>
-            </li>
-            <li class="project-item  active" data-filter-item data-category="dashboarding">
-              <a href="https://github.com/souhayla18/E_commerce_data_exploration">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/airbnb_dash.png" alt="task manager" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">airbnb data set report</h3>
-
-                <p class="project-category"><strong>PowerBI</strong> </p>
-
-              </a>
-            </li>
-
-       
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #BLOG
-      -->
-
-      <article class="blog" data-page="blog">
-
-        <header>
-          <h2 class="h2 article-title">Blog</h2>
-        </header>
-
-        <section class="blog-posts">
-
-          <ul class="blog-posts-list">
-              <li class="blog-post-item">
-              <a href="https://future-data-pipelines-ai.hashnode.dev/preview/6741af3b2aca61b5bf3fb0a7">
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/paper.jpg" alt="AI and Data Engineering" loading="lazy">
-                </figure>
-                <div class="blog-content">
-                  <div class="blog-meta">
-                    <p class="blog-category">Article</p>
-                    <span class="dot"></span>
-                    <time datetime="2024-11-23">March, 2025</time>
-                  </div>
-                  <h3 class="h3 blog-item-title">Bidirectional Encoder</h3>
-                  <p class="blog-text">
-                     Representations from Transformers Fine-Tuning for Sentiment Classification of Cek Bansos Reviews
-                  </p>
-                </div>
-              </a>
-            </li>
-            
-            <li class="blog-post-item">
-              <a href="https://future-data-pipelines-ai.hashnode.dev/preview/6741af3b2aca61b5bf3fb0a7">
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/my_stl_blog.png" alt="AI and Data Engineering" loading="lazy">
-                </figure>
-                <div class="blog-content">
-                  <div class="blog-meta">
-                    <p class="blog-category">Blog</p>
-                    <span class="dot"></span>
-                    <time datetime="2024-11-23">Nov 23, 2024</time>
-                  </div>
-                  <h3 class="h3 blog-item-title">AI in Data Engineering: From ELT to STL</h3>
-                  <p class="blog-text">
-                    How AI is revolutionizing data engineering workflows by transitioning from traditional ELT to STL processes.
-                  </p>
-                </div>
-              </a>
-            </li>
-            
-            <li class="blog-post-item">
-              <a href="https://iaico.org/index.php/JICO/article/view/6">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/digitograph_paper.jpeg" alt="Design conferences in 2022" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">paper</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">30 May,2024</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Article</h3>
-
-                  <p class="blog-text">
-                    Digitograph: A Mobile Digital Signatures Application for PDF file Using ED25519 and Asymmetric Encryption.
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="https://researchgate.net/publication/377721873_Exploration_of_Scientific_Articles_using_Web_Scraping_and_Unsupervised_Learning_A_Case_Study_on_ResearchGate?_sg%5B0%5D=_ktkxmcCYLONs-bS3JstqJPEmYk7Xy4OdYf1igpOWdxYFHoIWr9yK7YvswgLhCyHe2BWpNpxSGiw2-tGtOdjqQEF8XPQN6xQ0y91iYWS.L19hR8jljlLr0jI_fz6M2kVXtBJj-B34qQnIgOqX6VI_Hfm7_Ar6GBeqAXuvHYo-KAaO9CRWbfadKoF2FkApoQ&_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6ImhvbWUiLCJwYWdlIjoicHJvZmlsZSIsInByZXZpb3VzUGFnZSI6InByb2ZpbGUiLCJwb3NpdGlvbiI6InBhZ2VDb250ZW50In19">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/paperML.png" alt="Design conferences in 2022" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">paper</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2024</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Article</h3>
-
-                  <p class="blog-text">
-                    Exploration of Scientific Articles using Web Scraping and Unsupervised Learning: A Case Study on ResearchGate.
-
-                </div>
-
-              </a>
-            </li>
-
-           <li class="blog-post-item">
-              <a href="https://jurnal.unsil.ac.id/index.php/innovatics/article/view/10385/3273">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/paper2.png" alt="Best fonts every designer" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Paper</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">january, 2023</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Article</h3>
-
-                  <p class="blog-text">
-                    Comparison of Machine Learning Algorithms in Detecting Contaminants in Drinkable Water.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #CONTACT
-      -->
-
-      <article class="contact" data-page="contact">
-
-        <header>
-          <h2 class="h2 article-title">Contact</h2>
-        </header>
-
-        <section class="mapbox" data-mapbox>
-          <figure>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
-              width="400" height="300" loading="lazy"></iframe>
-          </figure>
-        </section>
-
-        <section class="contact-form">
-
-          <h3 class="h3 form-title">Contact Form</h3>
-          <form action="./assets/form.php" method="post" class="form" data-form>
-
-            <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
-
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
-            </div>
-
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
-
-            <button class="form-btn" type="submit" disabled data-form-btn>
-              <ion-icon name="paper-plane"></ion-icon>
-              <span>Send Message</span>
-            </button>
-
-          </form>
-
-        </section>
-
-      </article>
-
+      <button class="info_more-btn" data-sidebar-btn>
+        <span>Show Contacts</span>
+        <ion-icon name="chevron-down"></ion-icon>
+      </button>
     </div>
+    <div class="sidebar-info_more">
+      <div class="separator"></div>
+      <ul class="contacts-list">
+        <li class="contact-item">
+          <div class="icon-box"><ion-icon name="mail-outline"></ion-icon></div>
+          <div class="contact-info">
+            <p class="contact-title">Email</p>
+            <a href="mailto:souhaylaelmeftahi@gmail.com" class="contact-link">souhaylaelmeftahi@gmail.com</a>
+          </div>
+        </li>
+        <li class="contact-item">
+          <div class="icon-box"><ion-icon name="phone-portrait-outline"></ion-icon></div>
+          <div class="contact-info">
+            <p class="contact-title">Phone</p>
+            <a href="tel:+212668546041" class="contact-link">+(212) 668-546041</a>
+          </div>
+        </li>
+        <li class="contact-item">
+          <div class="icon-box"><ion-icon name="location-outline"></ion-icon></div>
+          <div class="contact-info">
+            <p class="contact-title">Location</p>
+            <address>Available Worldwide · Remote / Relocation</address>
+          </div>
+        </li>
+      </ul>
+      <div class="separator"></div>
+      <ul class="social-list">
+        <li class="social-item"><a href="https://github.com/souhayla18" class="social-link"><ion-icon name="logo-github"></ion-icon></a></li>
+        <li class="social-item"><a href="https://www.linkedin.com/in/souhayla-elmeftahi-49b5251a8/" class="social-link"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+        <li class="social-item"><a href="https://souhaylaelmeftahi.netlify.app" class="social-link"><ion-icon name="globe-outline"></ion-icon></a></li>
+      </ul>
+    </div>
+  </aside>
 
-  </main>
+  <div class="main-content">
+    <nav class="navbar">
+      <ul class="navbar-list">
+        <li class="navbar-item"><button class="navbar-link active" data-nav-link>About</button></li>
+        <li class="navbar-item"><button class="navbar-link" data-nav-link>Resume</button></li>
+        <li class="navbar-item"><button class="navbar-link" data-nav-link>Certificates</button></li>
+        <li class="navbar-item"><button class="navbar-link" data-nav-link>Portfolio</button></li>
+        <li class="navbar-item"><button class="navbar-link" data-nav-link>Blog</button></li>
+        <li class="navbar-item"><button class="navbar-link" data-nav-link>Contact</button></li>
+      </ul>
+    </nav>
+
+    <!-- ABOUT -->
+    <article class="about active" data-page="about">
+      <header><h2 class="h2 article-title">About me</h2></header>
+
+      <section class="about-text">
+      <p>I started with a simple question: why do so many data systems fail the people who rely on them?</p>
+<p>That question led me into data engineering designing pipelines, building platforms, creating the reporting layers that help teams make better decisions. I am early in my career(almost 2 years of Experience), but I have already worked across cloud infrastructure, ML systems, NLP and insurance data, and every project has taught me something new about what data is really for.</p>
+<p>Right now I work in motor and property insurance, building pricing intelligence tools and financial reporting systems. It is a complex domain and I enjoy that complexity. But I am genuinely curious about what comes next new industries, new data problems, new ways to make systems that actually work for the people using them.</p>
+ </section>
+
+      <!-- Typewriter -->
+      <div class="typewriter-wrap">
+        <span class="tw-prefix">$ currently building →</span>
+        <span class="tw-text" id="tw"></span>
+        <span class="tw-cursor">|</span>
+      </div>
+
+      <!-- Stats -->
+      <div class="stat-row">
+        <div class="stat-card">
+          <div class="stat-num"><span data-count="1" id="s1">0</span><span class="stat-suffix">yr</span></div>
+          <div class="stat-label">in production data engineering</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num"><span data-count="5" id="s2">0</span><span class="stat-suffix">mo</span></div>
+          <div class="stat-label">to first promotion</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num"><span data-count="9" id="s3">0</span><span class="stat-suffix">+</span></div>
+          <div class="stat-label">projects shipped</div>
+        </div>
+      </div>
 
 
+      <!-- What I do -->
+      <div class="badge-strip" style="margin-top:6px">
+        <span class="badge acc">Data Engineering</span>
+        <span class="badge acc">Cloud Platforms</span>
+        <span class="badge acc">Analytics & BI</span>
+        <span class="badge acc">ML Pipelines</span>
+        <span class="badge acc">Data Platforms</span>
+        <span class="badge gold">Insurance Domain</span>
+        <span class="badge gold">FinTech</span>
+      </div>
 
+      <section class="service">
+        <h3 class="h3 service-title">What I bring</h3>
+        <ul class="service-list">
+          <li class="service-item">
+            <div class="svc-num">01</div>
+                <div class="service-icon-box" style="font-size:28px">⚙️</div>
+            <div class="service-content-box">
+              <h4 class="h4 service-item-title">Data Engineering</h4>
+              <p class="service-item-text">End-to-end pipeline design  ingestion, transformation, orchestration, quality validation. Built for production, not proof of concept.</p>
+            </div>
+          </li>
+          <li class="service-item">
+            <div class="svc-num">02</div>
+            <div class="service-icon-box" style="font-size:28px">📊</div>
+            <div class="service-content-box">
+              <h4 class="h4 service-item-title">Analytics & BI</h4>
+              <p class="service-item-text">Dashboards and reporting systems that decision-makers actually use operational KPIs, intelligence tools, competitive monitoring.</p>
+            </div>
+          </li>
+          <li class="service-item">
+            <div class="svc-num">03</div>
+            <div class="service-icon-box" style="font-size:28px">☁️</div>
+            <div class="service-content-box">
+              <h4 class="h4 service-item-title">Cloud & Platform Architecture</h4>
+              <p class="service-item-text">Scalable platform design on GCP, AWS and Azure  medallion architecture, data lakehouse, federated virtualisation, cost-efficient storage.</p>
+            </div>
+          </li>
+          <li class="service-item">
+            <div class="svc-num">04</div>
+            <div class="service-icon-box" style="font-size:28px">🧠</div>
+            <div class="service-content-box">
+              <h4 class="h4 service-item-title">Domain Knowledge</h4>
+              <p class="service-item-text">Insurance, FinTech, and beyond. I understand what the data represents and why it matters  not just how to move it.</p>
+            </div>
+          </li>
+        </ul>
+      </section>
 
+      <section class="testimonials">
+        <h3 class="h3 testimonials-title">Testimonials</h3>
+        <ul class="testimonials-list has-scrollbar">
+          <li class="testimonials-item">
+            <div class="content-card" data-testimonials-item>
+              <figure class="testimonials-avatar-box"><img src="./assets/images/avatar-1.png" alt="Aaqib Waleed" width="60" data-testimonials-avatar></figure>
+              <h4 class="h4 testimonials-item-title" data-testimonials-title>Aaqib Waleed</h4>
+              <p style="font-size:10px;color:var(--accent);margin-bottom:8px;font-family:var(--fm)">Senior Data Scientist · Amazon</p>
+              <div class="testimonials-text" data-testimonials-text><p>Souhayla is a highly skilled and dedicated data engineer who excels in designing robust data pipelines. Her problem-solving abilities and proficiency in cloud technologies consistently deliver innovative solutions.</p></div>
+            </div>
+          </li>
+          <li class="testimonials-item">
+            <div class="content-card" data-testimonials-item>
+              <figure class="testimonials-avatar-box"><img src="./assets/images/avatar-2.png" alt="Aziz Khamjane" width="60" data-testimonials-avatar></figure>
+              <h4 class="h4 testimonials-item-title" data-testimonials-title>Aziz Khamjane</h4>
+              <p style="font-size:10px;color:var(--accent);margin-bottom:8px;font-family:var(--fm)">Professor · ENSAH Engineering School</p>
+              <div class="testimonials-text" data-testimonials-text><p>Souhayla combines remarkable intelligence with an unparalleled passion for learning. She graduated with honours, which speaks for itself.</p></div>
+            </div>
+          </li>
+          <li class="testimonials-item">
+            <div class="content-card" data-testimonials-item>
+              <figure class="testimonials-avatar-box"><img src="./assets/images/avatar-4.png" alt="Joynal Abedin" width="60" data-testimonials-avatar></figure>
+              <h4 class="h4 testimonials-item-title" data-testimonials-title>Joynal Abedin</h4>
+              <p style="font-size:10px;color:var(--accent);margin-bottom:8px;font-family:var(--fm)">Senior Data Scientist · T-Mobile</p>
+              <div class="testimonials-text" data-testimonials-text><p>Her eagerness to tackle complex challenges and proactive approach to learning are truly admirable. A strong work ethic that will take her far.</p></div>
+            </div>
+          </li>
+        </ul>
+      </section>
 
+      <div class="modal-container" data-modal-container>
+        <div class="overlay" data-overlay></div>
+        <section class="testimonials-modal">
+          <button class="modal-close-btn" data-modal-close-btn><ion-icon name="close-outline"></ion-icon></button>
+          <div class="modal-img-wrapper">
+            <figure class="modal-avatar-box"><img src="./assets/images/avatar-1.png" alt="avatar" width="80" data-modal-img></figure>
+            <img src="./assets/images/icon-quote.svg" alt="quote">
+          </div>
+          <div class="modal-content">
+            <h4 class="h3 modal-title" data-modal-title>Name</h4>
+            <time datetime="2025">2025</time>
+            <div data-modal-text><p></p></div>
+          </div>
+        </section>
+      </div>
+    </article>
 
-  <!--
-    - custom js link
-  -->
-  <script src="./assets/js/script.js"></script>
+    <!-- RESUME -->
+    <article class="resume" data-page="resume">
+      <header><h2 class="h2 article-title">Resume</h2></header>
+      <section class="timeline">
+        <div class="title-wrapper">
+          <div class="icon-box"><ion-icon name="briefcase-outline"></ion-icon></div>
+          <h3 class="h3">Experience</h3>
+        </div>
+        <ol class="timeline-list">
+          <li class="timeline-item">
+            <h4 class="h4 timeline-item-title">Data Engineer I · Ominimo Insurance (MGA · Zurich)</h4>
+            <span>Sep 2025 – Present · Promoted in 5 months</span>
+            <p class="timeline-text">Motor & property insurance MGA. Own end-to-end pipelines across telematics, financial and behavioural data feeding pricing models and business intelligence. Design and maintain dashboards used daily at CEO level. Driving the architecture of a scalable internal data platform.</p>
+          </li>
+          <li class="timeline-item">
+            <h4 class="h4 timeline-item-title">Data Engineer Intern (Final Year Project) · Sofrecom Orange</h4>
+            <span>Jan – Aug 2025 · Morocco</span>
+            <p class="timeline-text">Built a federated analytics platform using Trino — reduced pipeline costs ~25% and time-to-insight ~30% through dynamic Airflow orchestration and dbt on BigQuery.</p>
+          </li>
+          <li class="timeline-item">
+            <h4 class="h4 timeline-item-title">Cloud Data Engineer Intern · Broccolidata</h4>
+            <span>Summer 2024 · Morocco</span>
+            <p class="timeline-text">Cloud-native pipelines on GCP and AWS — serverless compute, object storage and event-driven architecture.</p>
+          </li>
+          <li class="timeline-item">
+            <h4 class="h4 timeline-item-title">Data Scientist & AI Intern · 3D Smart Factory</h4>
+            <span>Summer 2024</span>
+            <p class="timeline-text">NLP-based CV-to-job matching using LLMs and LangChain — automated candidate scoring with Kafka for real-time feedback delivery.</p>
+          </li>
+        </ol>
+      </section>
 
-  <!--
-    - ionicon link
-  -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+      <section class="timeline">
+        <div class="title-wrapper">
+          <div class="icon-box"><ion-icon name="book-outline"></ion-icon></div>
+          <h3 class="h3">Education</h3>
+        </div>
+        <ol class="timeline-list">
+          <li class="timeline-item">
+            <h4 class="h4 timeline-item-title">Engineer's Degree (Bac+5) · Data Engineering · ENSAH</h4>
+            <span>2020 – Jul 2025 · Graduated with Honours</span>
+            <p class="timeline-text">Mathematics, statistics & probability, machine learning, deep learning, NLP, data mining, AI, cloud computing, software architecture, entrepreneurship and digital transformation.</p>
+          </li>
+        </ol>
+      </section>
 
+      <section class="skill">
+        <h3 class="h3 skills-title">Technical skills</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Python</span><span class="skill-tag">SQL</span><span class="skill-tag">Apache Airflow</span><span class="skill-tag">dbt</span><span class="skill-tag">Trino</span><span class="skill-tag">Apache Spark</span><span class="skill-tag">Kafka</span><span class="skill-tag">BigQuery</span><span class="skill-tag">Snowflake</span><span class="skill-tag">AWS</span><span class="skill-tag">GCP</span><span class="skill-tag">Azure</span><span class="skill-tag">Terraform</span><span class="skill-tag">Apache Iceberg</span><span class="skill-tag">Databricks</span><span class="skill-tag">Elasticsearch</span><span class="skill-tag">ELK Stack</span><span class="skill-tag">Kibana</span><span class="skill-tag">Grafana</span><span class="skill-tag">Power BI</span><span class="skill-tag">Docker</span><span class="skill-tag">Git</span><span class="skill-tag">Medallion Architecture</span><span class="skill-tag">Data Lakehouse</span><span class="skill-tag">CDC</span><span class="skill-tag">NiFi</span><span class="skill-tag">Mage.ai</span>
+        </div>
+      </section>
+
+      <section class="skill">
+        <h3 class="h3 skills-title">Domain knowledge</h3>
+        <div class="skill-tags">
+          <span class="skill-tag domain">Motor & Property Insurance</span><span class="skill-tag domain">GEP · GWP · UPR</span><span class="skill-tag domain">BDX Reporting</span><span class="skill-tag domain">Loss Ratio</span><span class="skill-tag domain">Pricing Intelligence</span><span class="skill-tag domain">Tariff Analysis</span><span class="skill-tag domain">Telematics Data</span><span class="skill-tag domain">Risk Segmentation</span><span class="skill-tag domain">MGA Model</span><span class="skill-tag domain">Financial Reporting</span>
+        </div>
+      </section>
+
+      <section class="skill">
+        <h3 class="h3 skills-title">Languages</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Arabic — Native</span><span class="skill-tag">French — Fluent</span><span class="skill-tag">English — Fluent</span>
+        </div>
+      </section>
+
+      <div style="margin-top:24px">
+        <a href="./assets/images/souhayla_cv.pdf" class="dl-btn" download>
+          <ion-icon name="download-outline"></ion-icon> Download CV
+        </a>
+      </div>
+    </article>
+
+    <!-- CERTIFICATES -->
+    <article class="certificates" data-page="certificates">
+      <header><h2 class="h2 article-title">Certificates</h2></header>
+      <section class="certificate-posts">
+        <ul class="certificate-posts-list">
+          <li class="certificate-post-item"><a href="https://www.coursera.org/account/accomplishments/verify/7NZFP4C3NUCT"><figure class="certificate-banner-box"><img src="./assets/images/azure_cert.png" alt="Azure" loading="lazy"></figure><div class="certificate-content"><h3 class="certificate-item-title">Azure Data Engineer Associate</h3><p class="certificate-text">Microsoft · via Coursera</p></div></a></li>
+          <li class="certificate-post-item"><a href="https://www.coursera.org/account/accomplishments/verify/6LH3E2ML4M6K"><figure class="certificate-banner-box"><img src="./assets/images/machine_learning_cert.png" alt="ML" loading="lazy"></figure><div class="certificate-content"><h3 class="certificate-item-title">Machine Learning Specialisation</h3><p class="certificate-text">DeepLearning.AI · Stanford · Coursera</p></div></a></li>
+          <li class="certificate-post-item"><a href="https://www.udemy.com/certificate/UC-35cabcd8-35cf-47c4-83e6-9f3538f24456/"><figure class="certificate-banner-box"><img src="./assets/images/big_data_cert.png" alt="Big Data" loading="lazy"></figure><div class="certificate-content"><h3 class="certificate-item-title">Big Data — Hadoop Ecosystem</h3><p class="certificate-text">Udemy</p></div></a></li>
+          <li class="certificate-post-item"><a href="https://drive.google.com/drive/folders/1apBdZQ5SWOBBydlLEacgUzbUM6r9s5u5"><figure class="certificate-banner-box"><img src="./assets/images/datacamp_cert.png" alt="DataCamp" loading="lazy"></figure><div class="certificate-content"><h3 class="certificate-item-title">Data Engineering · Science · Analytics</h3><p class="certificate-text">12 Certificates · DataCamp</p></div></a></li>
+        </ul>
+      </section>
+    </article>
+
+    <!-- PORTFOLIO -->
+    <article class="portfolio" data-page="portfolio">
+      <header><h2 class="h2 article-title">Projects</h2></header>
+      <section class="projects">
+        <ul class="filter-list">
+          <li class="filter-item"><button class="active" data-filter-btn>All</button></li>
+          <li class="filter-item"><button data-filter-btn>Data Engineering</button></li>
+          <li class="filter-item"><button data-filter-btn>Data Science</button></li>
+          <li class="filter-item"><button data-filter-btn>Analytics</button></li>
+        </ul>
+        <div class="filter-select-box">
+          <button class="filter-select" data-select>
+            <div class="select-value" data-selecct-value>Select category</div>
+            <div class="select-icon"><ion-icon name="chevron-down"></ion-icon></div>
+          </button>
+          <ul class="select-list">
+            <li class="select-item"><button data-select-item>All</button></li>
+            <li class="select-item"><button data-select-item>Data Engineering</button></li>
+            <li class="select-item"><button data-select-item>Data Science</button></li>
+            <li class="select-item"><button data-select-item>Analytics</button></li>
+          </ul>
+        </div>
+        <ul class="project-list">
+          <li class="project-item active" data-filter-item data-category="data engineering"><a href="https://github.com/souhayla18/dataplatform_Meltano"><figure class="project-img"><div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div><img src="./assets/images/Data_Platform.png" alt="Data Platform" loading="lazy"></figure><h3 class="project-title">Holistic Data Platform — ETL, dbt & Governance</h3><p class="project-category">Meltano · dbt · Docker · GCP · In Progress</p></a></li>
+          <li class="project-item active" data-filter-item data-category="data engineering"><a href="https://github.com/souhayla18/scalable_dp_Minio"><figure class="project-img"><div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div><img src="./assets/images/minioArch.jpg" alt="Lakehouse" loading="lazy"></figure><h3 class="project-title">Scalable Data Lakehouse — MinIO · Kafka · Lambda</h3><p class="project-category">MinIO · Kafka · KRaft · AWS · In Progress</p></a></li>
+          <li class="project-item active" data-filter-item data-category="data engineering"><a href="https://github.com/souhayla18/-AzurCloudMigrate-CI-CD"><figure class="project-img"><div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div><img src="./assets/images/adv_prj_architecture.png" alt="Azure Pipeline" loading="lazy"></figure><h3 class="project-title">Azure Cloud Pipeline — AdventureWorks CI/CD</h3><p class="project-category">Azure Data Factory · Synapse Analytics · Databricks · DevOps</p></a></li>
+          <li class="project-item active" data-filter-item data-category="data engineering"><a href="https://github.com/souhayla18/Aribnb_data_exp"><figure class="project-img"><div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div><img src="./assets/images/airbnb_pj_arch.png" alt="Airbnb" loading="lazy"></figure><h3 class="project-title">Airbnb End-to-End Data Pipeline</h3><p class="project-category">Mage.ai · dbt · Snowflake · PostgreSQL · Python</p></a></li>
+          <li class="project-item active" data-filter-item data-category="data engineering"><a href="https://github.com/souhayla18/googlePatents"><figure class="project-img"><div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div><img src="./assets/images/patents_arch.png" alt="Patents" loading="lazy"></figure><h3 class="project-title">Google Patents Analysis Pipeline</h3><p class="project-category">Mage.ai · Spark · Snowflake · Selenium</p></a></li>
+          <li class="project-item active" data-filter-item data-category="data science"><a href="https://github.com/ZakariaBenlamkadam/Nlp-recrutement/tree/main"><figure class="project-img"><div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div><img src="./assets/images/nlp_rec_arch.png" alt="NLP" loading="lazy"></figure><h3 class="project-title">NLP-Based Recruitment Optimisation System</h3><p class="project-category">Kafka · NLP · LLMs · LangChain</p></a></li>
+          <li class="project-item active" data-filter-item data-category="data science"><a href="#"><figure class="project-img"><div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div><img src="./assets/images/ML-arch.jpeg" alt="Scientific Articles" loading="lazy"></figure><h3 class="project-title">Scientific Articles Exploration via ML</h3><p class="project-category">Web Scraping · Unsupervised Learning · Python</p></a></li>
+          <li class="project-item active" data-filter-item data-category="analytics"><a href="https://github.com/souhayla18/E_commerce_data_exploration"><figure class="project-img"><div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div><img src="./assets/images/ecomeerce_dash.png" alt="E-commerce" loading="lazy"></figure><h3 class="project-title">E-commerce Data Report</h3><p class="project-category">SQL · BigQuery · Looker Studio</p></a></li>
+          <li class="project-item active" data-filter-item data-category="analytics"><a href="#"><figure class="project-img"><div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div><img src="./assets/images/airbnb_dash.png" alt="Airbnb Dashboard" loading="lazy"></figure><h3 class="project-title">Airbnb Dataset Report</h3><p class="project-category">Power BI</p></a></li>
+        </ul>
+      </section>
+    </article>
+
+    <!-- BLOG -->
+    <article class="blog" data-page="blog">
+      <header><h2 class="h2 article-title">Writing & Research</h2></header>
+      <section class="blog-posts">
+        <ul class="blog-posts-list">
+          <li class="blog-post-item"><a href="https://future-data-pipelines-ai.hashnode.dev/"><figure class="blog-banner-box"><img src="./assets/images/my_stl_blog.png" alt="AI in DE" loading="lazy"></figure><div class="blog-content"><div class="blog-meta"><p class="blog-category">Blog</p><span class="dot"></span><time datetime="2024-11-23">Nov 2024</time></div><h3 class="h3 blog-item-title">AI in Data Engineering: From ELT to STL</h3><p class="blog-text">How AI is reshaping data engineering workflows — from traditional ELT patterns to smarter transformation layers.</p></div></a></li>
+          <li class="blog-post-item"><a href="https://iaico.org/index.php/JICO/article/view/6"><figure class="blog-banner-box"><img src="./assets/images/digitograph_paper.jpeg" alt="Digitograph" loading="lazy"></figure><div class="blog-content"><div class="blog-meta"><p class="blog-category">Research Paper</p><span class="dot"></span><time datetime="2024-05-30">May 2024</time></div><h3 class="h3 blog-item-title">Digitograph: Mobile Digital Signatures for PDF</h3><p class="blog-text">Peer-reviewed paper on digital signatures using ED25519 and asymmetric encryption. Published by IAICO.</p></div></a></li>
+          <li class="blog-post-item"><a href="https://researchgate.net/publication/377721873"><figure class="blog-banner-box"><img src="./assets/images/paperML.png" alt="ML Research" loading="lazy"></figure><div class="blog-content"><div class="blog-meta"><p class="blog-category">Research Paper</p><span class="dot"></span><time datetime="2024-02-23">Feb 2024</time></div><h3 class="h3 blog-item-title">Scientific Articles via Web Scraping & Unsupervised Learning</h3><p class="blog-text">Automated article discovery and clustering — ResearchGate case study.</p></div></a></li>
+          <li class="blog-post-item"><a href="https://jurnal.unsil.ac.id/index.php/innovatics/article/view/10385/3273"><figure class="blog-banner-box"><img src="./assets/images/paper2.png" alt="Water Quality" loading="lazy"></figure><div class="blog-content"><div class="blog-meta"><p class="blog-category">Research Paper</p><span class="dot"></span><time datetime="2023-01">Jan 2023</time></div><h3 class="h3 blog-item-title">ML Algorithms in Detecting Contaminants in Drinkable Water</h3><p class="blog-text">Comparison of ML approaches for water quality classification. Innovatics journal.</p></div></a></li>
+        </ul>
+      </section>
+    </article>
+
+    <!-- CONTACT -->
+    <article class="contact" data-page="contact">
+      <header><h2 class="h2 article-title">Contact</h2></header>
+      <section class="availability-strip">
+        <div class="avail-grid">
+          <div class="avail-item"><span class="avail-icon">🌍</span><div><p class="avail-label">Remote</p><p class="avail-val">Europe · UK · North America · Middle East</p></div></div>
+          <div class="avail-item"><span class="avail-icon">✈️</span><div><p class="avail-label">Relocation</p><p class="avail-val">Open to the right opportunity</p></div></div>
+          <div class="avail-item"><span class="avail-icon">💼</span><div><p class="avail-label">Work type</p><p class="avail-val">CDI · Freelance · B2B Contract</p></div></div>
+          <div class="avail-item"><span class="avail-icon">⚡</span><div><p class="avail-label">Availability</p><p class="avail-val">Open to discuss immediately</p></div></div>
+        </div>
+      </section>
+      <section class="contact-form">
+        <h3 class="h3 form-title">Get in touch</h3>
+            <form name="contact" method="POST" data-netlify="true" class="form" data-form> 
+                <input type="hidden" name="form-name" value="contact">
+                 <div class="input-wrapper">
+            <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+            <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+          </div>
+          <textarea name="message" class="form-input" placeholder="Your message" required data-form-input></textarea>
+          <button class="form-btn" type="submit" disabled data-form-btn>
+            <ion-icon name="paper-plane"></ion-icon><span>Send Message</span>
+          </button>
+        </form>
+      </section>
+    </article>
+  </div>
+</main>
+
+<script src="./assets/js/script.js"></script>
+
+<script>
+/* ── SUBTLE PARTICLE BACKGROUND ── */
+(function(){
+  const c=document.getElementById('bg-canvas');
+  const x=c.getContext('2d');
+  function resize(){c.width=window.innerWidth;c.height=window.innerHeight}
+  resize();window.addEventListener('resize',resize);
+  const N=45,pts=[],cols=['rgba(79,142,247,','rgba(46,196,182,','rgba(240,192,96,'];
+  for(let i=0;i<N;i++) pts.push({x:Math.random()*c.width,y:Math.random()*c.height,vx:(Math.random()-.5)*.25,vy:(Math.random()-.5)*.25,r:Math.random()*1.2+.4,ci:Math.floor(Math.random()*3)});
+  let mx=-999,my=-999;
+  window.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY});
+  function draw(){
+    x.clearRect(0,0,c.width,c.height);
+    for(let p of pts){
+      p.x+=p.vx;p.y+=p.vy;
+      if(p.x<0||p.x>c.width)p.vx*=-1;
+      if(p.y<0||p.y>c.height)p.vy*=-1;
+      let dx=p.x-mx,dy=p.y-my,d=Math.sqrt(dx*dx+dy*dy);
+      if(d<100){p.x+=dx/d*.3;p.y+=dy/d*.3}
+    }
+    for(let i=0;i<N;i++) for(let j=i+1;j<N;j++){
+      let dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,d=Math.sqrt(dx*dx+dy*dy);
+      if(d<110){x.beginPath();x.moveTo(pts[i].x,pts[i].y);x.lineTo(pts[j].x,pts[j].y);x.strokeStyle=cols[pts[i].ci]+(1-d/110)*.15+')';x.lineWidth=.5;x.stroke()}
+    }
+    for(let p of pts){x.beginPath();x.arc(p.x,p.y,p.r,0,Math.PI*2);x.fillStyle=cols[p.ci]+'0.6)';x.fill()}
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+
+/* ── TYPEWRITER ── */
+(function(){
+  const words=['pricing intelligence pipelines','telematics data flows','scalable data platforms','ML-ready data pipelines','financial reporting systems','cloud-native architectures','end-to-end data engineering'];
+  let wi=0,ci=0,del=false;
+  const el=document.getElementById('tw');
+  if(!el)return;
+  function tick(){
+    let w=words[wi];
+    if(!del){
+      el.textContent=w.slice(0,++ci);
+      if(ci===w.length){del=true;setTimeout(tick,1800);return}
+      setTimeout(tick,55);
+    } else {
+      el.textContent=w.slice(0,--ci);
+      if(ci===0){del=false;wi=(wi+1)%words.length;setTimeout(tick,400);return}
+      setTimeout(tick,28);
+    }
+  }
+  setTimeout(tick,800);
+})();
+
+/* ── STAT COUNTERS ── */
+function animCount(el,target){
+  let s=performance.now();
+  function f(now){
+    let p=Math.min((now-s)/900,1),ease=1-Math.pow(1-p,3);
+    el.textContent=Math.floor(ease*target);
+    if(p<1)requestAnimationFrame(f);
+    else el.textContent=target;
+  }
+  requestAnimationFrame(f);
+}
+function runCounters(){
+  let s1=document.getElementById('s1'),s2=document.getElementById('s2'),s3=document.getElementById('s3');
+  if(s1)animCount(s1,1);if(s2)animCount(s2,5);if(s3)animCount(s3,9);
+}
+setTimeout(runCounters,500);
+</script>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
-
 </html>
